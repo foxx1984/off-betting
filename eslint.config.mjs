@@ -30,16 +30,7 @@ export default [
             { sourceTag: 'scope:shared', onlyDependOnLibsWithTags: ['scope:shared'] },
           ],
         }
-      ],
-      '@typescript-eslint/no-inferrable-types': 'off',
-      '@typescript-eslint/typedef':
-        ['error',
-          {
-            variableDeclaration: true,
-            parameter: false,
-            propertyDeclaration: true,
-            memberVariableDeclaration: true
-          }]
+      ]
     }
   },
   {
@@ -54,6 +45,28 @@ export default [
       '**/*.mjs'
     ],
     // Override or add rules here
-    rules: {}
+    rules: {
+      'linebreak-style': ['error', 'unix'], // correspond à LF
+      '@typescript-eslint/explicit-member-accessibility': ['error', {
+        accessibility: 'explicit',          // exiger un modificateur
+        overrides: {
+          constructors: 'no-public',        // ne pas forcer public sur ctor
+          methods: 'explicit',
+          properties: 'explicit',
+          accessors: 'explicit',
+          parameterProperties: 'explicit',
+        },
+      }],
+      '@typescript-eslint/no-inferrable-types': 'off',
+      '@typescript-eslint/typedef':
+        ['error',
+          {
+            variableDeclaration: true,
+            parameter: false,
+            propertyDeclaration: true,
+            memberVariableDeclaration: true
+          }
+        ]
+    }
   }
 ];

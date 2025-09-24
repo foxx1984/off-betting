@@ -5,6 +5,7 @@
   "semi": true,
   "quoteProps": "preserve",
   "bracketSpacing": false,
+  "endOfLine": "lf",
   "overrides": [
     {
       "files": "*.html",

@@ -1,0 +1,26 @@
+# Normalise automatiquement les fins de ligne selon l'OS pour tous les fichiers texte
+* text=auto
+
+# Force les fins de ligne LF pour les fichiers spécifiques de code source front-end
+*.ts text eol=lf
+*.tsx text eol=lf
+*.js text eol=lf
+*.jsx text eol=lf
+*.json text eol=lf
+*.css text eol=lf
+*.scss text eol=lf
+*.html text eol=lf
+.prettierrc text eol=lf
+.eslintrc.json text eol=lf
+.eslintrc.js text eol=lf
+.prettierrc.json text eol=lf
+
+# Les fichiers binaires ne sont pas modifiés
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.zip binary
+*.exe binary
+*.dll binary

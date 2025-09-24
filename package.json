@@ -5,6 +5,7 @@
   "scripts": {
     "start": "pnpm nx serve app-betting",
     "build": "pnpm nx build app-betting",
+    "lint:all": "pnpm nx run-many --target=lint --all --fix",
     "lint:ts": "pnpm nx lint app-betting",
     "lint:prettier": "pnpm nx format:check",
     "lint": "pnpm run lint:ts && pnpm run lint:prettier",
@@ -13,7 +14,10 @@
     "format": "pnpm run format:ts && pnpm run format:prettier",
     "test": "pnpm nx test app-betting",
     "test:watch": "pnpm nx test app-betting --watch",
-    "test:cov": "pnpm nx test app-betting --coverage --runInBand"
+    "test:cov": "pnpm nx test app-betting --coverage --runInBand",
+    "lint:affected": "pnpm nx affected:lint",
+    "format:affected": "pnpm nx affected:format:write",
+    "test:affected": "pnpm nx affected:test"
   },
   "private": true,
   "dependencies": {
@@ -24,6 +28,8 @@
     "@angular/platform-browser": "~20.2.0",
     "@angular/platform-browser-dynamic": "~20.2.0",
     "@angular/router": "~20.2.0",
+    "@automapper/classes": "^8.8.1",
+    "@automapper/core": "^8.8.1",
     "rxjs": "~7.8.0",
     "zone.js": "~0.15.0"
   },
