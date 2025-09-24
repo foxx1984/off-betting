@@ -1,3 +1,18 @@
 {
-  "singleQuote": true
+  "printWidth": 100,
+  "trailingComma": "none",
+  "singleQuote": true,
+  "semi": true,
+  "quoteProps": "preserve",
+  "bracketSpacing": false,
+  "overrides": [
+    {
+      "files": "*.html",
+      "options": {
+        "parser": "angular",
+        "bracketSameLine": true,
+        "htmlWhitespaceSensitivity": "css"
+      }
+    }
+  ]
 }
