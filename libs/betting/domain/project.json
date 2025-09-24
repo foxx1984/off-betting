@@ -1,0 +1,21 @@
+{
+  "name": "betting-domain",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/betting/domain/src",
+  "prefix": "betting-domain",
+  "projectType": "library",
+  "tags": ["domain:betting", "type:domain-logic"],
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/betting/domain/jest.config.ts",
+        "tsConfig": "libs/betting/domain/tsconfig.spec.json"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

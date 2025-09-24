@@ -1,5 +1,5 @@
 import nx from '@nx/eslint-plugin';
-import baseConfig from '../../eslint.config.mjs';
+import baseConfig from '../../../eslint.config.mjs';
 
 export default [
   ...baseConfig,
@@ -12,23 +12,23 @@ export default [
         'error',
         {
           type: 'attribute',
-          prefix: 'app',
-          style: 'camelCase',
-        },
+          prefix: 'bettingDomain',
+          style: 'camelCase'
+        }
       ],
       '@angular-eslint/component-selector': [
         'error',
         {
           type: 'element',
-          prefix: 'app',
-          style: 'kebab-case',
-        },
-      ],
-    },
+          prefix: 'betting-domain',
+          style: 'kebab-case'
+        }
+      ]
+    }
   },
   {
     files: ['**/*.html'],
     // Override or add rules here
-    rules: {},
-  },
+    rules: {}
+  }
 ];
