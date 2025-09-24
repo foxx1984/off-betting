@@ -16,47 +16,30 @@ export default [
           enforceBuildableLibDependency: true,
           allow: ['^.*/eslint(\\.base)?\\.config\\.[cm]?[jt]s$'],
           depConstraints: [
-            {
-              'sourceTag': 'domain:app-betting',
-              'onlyDependOnLibsWithTags': ['domain:app-betting', 'domain:shared']
-            },
-            {
-              'sourceTag': 'domain:betting',
-              'onlyDependOnLibsWithTags': ['domain:betting', 'domain:shared']
-            },
-            {
-              'sourceTag': 'type:app',
-              'onlyDependOnLibsWithTags': [
-                'type:api',
-                'type:feature',
-                'type:ui',
-                'type:domain-logic',
-                'type:util'
-              ]
-            },
-            {
-              'sourceTag': 'type:api',
-              'onlyDependOnLibsWithTags': ['type:ui', 'type:domain-logic', 'type:util']
-            },
-            {
-              'sourceTag': 'type:feature',
-              'onlyDependOnLibsWithTags': ['type:ui', 'type:domain-logic', 'type:util']
-            },
-            {
-              'sourceTag': 'type:ui',
-              'onlyDependOnLibsWithTags': ['type:domain-logic', 'type:util']
-            },
-            {
-              'sourceTag': 'type:domain-logic',
-              'onlyDependOnLibsWithTags': ['type:util']
-            },
-            {
-              'sourceTag': 'domain:shared',
-              'onlyDependOnLibsWithTags': ['domain:shared']
-            }
-          ]
+            // Contrainte de scope (dimension 1)
+            { sourceTag: 'scope:app-betting', onlyDependOnLibsWithTags: ['scope:app-betting', 'scope:shared'] },
+
+            // Contraintes de type (dimension 2)
+            { sourceTag: 'type:app', onlyDependOnLibsWithTags: ['type:feature', 'type:ui', 'type:domain-logic', 'type:util', 'type:data-access'] },
+            { sourceTag: 'type:feature', onlyDependOnLibsWithTags: ['type:ui', 'type:domain-logic', 'type:util', 'type:data-access'] },
+            { sourceTag: 'type:ui', onlyDependOnLibsWithTags: ['type:domain-logic', 'type:util'] },
+            { sourceTag: 'type:data-access', onlyDependOnLibsWithTags: ['type:domain-logic', 'type:util'] },
+            { sourceTag: 'type:domain-logic', onlyDependOnLibsWithTags: ['type:util'] },
+
+            // Contrainte de scope shared
+            { sourceTag: 'scope:shared', onlyDependOnLibsWithTags: ['scope:shared'] },
+          ],
         }
-      ]
+      ],
+      '@typescript-eslint/no-inferrable-types': 'off',
+      '@typescript-eslint/typedef':
+        ['error',
+          {
+            variableDeclaration: true,
+            parameter: false,
+            propertyDeclaration: true,
+            memberVariableDeclaration: true
+          }]
     }
   },
   {

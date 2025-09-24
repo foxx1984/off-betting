@@ -15,9 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@org/app-betting/domain": ["libs/app-betting/domain/src/index.ts"],
-      "@org/betting/domain": ["libs/betting/domain/src/index.ts"],
-      "@org/data-access": ["libs/app-betting/data-access/src/index.ts"]
+      "@org/app-betting/data-access": ["libs/app-betting/data-access/src/index.ts"],
+      "@org/app-betting/domain": ["libs/app-betting/domain/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
