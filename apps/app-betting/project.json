@@ -1,27 +1,27 @@
 {
-  "name": "betting",
+  "name": "app-betting",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "app",
-  "sourceRoot": "apps/betting/src",
-  "tags": ["domain:betting", "type:app"],
+  "sourceRoot": "apps/app-betting/src",
+  "tags": ["domain:app-betting", "type:app"],
   "targets": {
     "build": {
       "executor": "@angular/build:application",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/betting",
-        "browser": "apps/betting/src/main.ts",
+        "outputPath": "dist/apps/app-betting",
+        "browser": "apps/app-betting/src/main.ts",
         "polyfills": ["zone.js"],
-        "tsConfig": "apps/betting/tsconfig.app.json",
+        "tsConfig": "apps/app-betting/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
           {
             "glob": "**/*",
-            "input": "apps/betting/public"
+            "input": "apps/app-betting/public"
           }
         ],
-        "styles": ["apps/betting/src/styles.scss"]
+        "styles": ["apps/app-betting/src/styles.scss"]
       },
       "configurations": {
         "production": {
@@ -52,10 +52,10 @@
       "executor": "@angular/build:dev-server",
       "configurations": {
         "production": {
-          "buildTarget": "betting:build:production"
+          "buildTarget": "app-betting:build:production"
         },
         "development": {
-          "buildTarget": "betting:build:development"
+          "buildTarget": "app-betting:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -63,7 +63,7 @@
     "extract-i18n": {
       "executor": "@angular/build:extract-i18n",
       "options": {
-        "buildTarget": "betting:build"
+        "buildTarget": "app-betting:build"
       }
     },
     "lint": {
@@ -73,17 +73,17 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/betting/jest.config.ts",
-        "tsConfig": "apps/betting/tsconfig.spec.json"
+        "jestConfig": "apps/app-betting/jest.config.ts",
+        "tsConfig": "apps/app-betting/tsconfig.spec.json"
       }
     },
     "serve-static": {
       "continuous": true,
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "betting:build",
+        "buildTarget": "app-betting:build",
         "port": 4200,
-        "staticFilePath": "dist/apps/betting/browser",
+        "staticFilePath": "dist/apps/app-betting/browser",
         "spa": true
       }
     }

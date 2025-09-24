@@ -1,8 +1,8 @@
 export default {
-  displayName: 'betting',
+  displayName: 'app-betting',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: '../../coverage/apps/betting',
+  coverageDirectory: '../../coverage/apps/app-betting',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',

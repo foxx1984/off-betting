@@ -5,9 +5,8 @@ import {Component} from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'betting';
+  title = 'app-betting';
 }

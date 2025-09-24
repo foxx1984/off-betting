@@ -1,0 +1,9 @@
+{
+  "name": "app-betting-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/app-betting-e2e/src",
+  "implicitDependencies": ["app-betting"],
+  "// targets": "to see all targets run: nx show project app-betting-e2e --web",
+  "targets": {}
+}

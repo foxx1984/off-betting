@@ -12,7 +12,7 @@ export default [
         'error',
         {
           type: 'attribute',
-          prefix: 'bettingDomain',
+          prefix: 'appBettingDomain',
           style: 'camelCase'
         }
       ],
@@ -20,7 +20,7 @@ export default [
         'error',
         {
           type: 'element',
-          prefix: 'betting-domain',
+          prefix: 'app-betting-domain',
           style: 'kebab-case'
         }
       ]

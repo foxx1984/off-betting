@@ -3,17 +3,17 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "pnpm nx serve app-offline-betting-tracking",
-    "build": "pnpm nx build app-offline-betting-tracking",
-    "lint:ts": "pnpm nx lint app-offline-betting-tracking",
+    "start": "pnpm nx serve app-betting",
+    "build": "pnpm nx build app-betting",
+    "lint:ts": "pnpm nx lint app-betting",
     "lint:prettier": "pnpm nx format:check",
     "lint": "pnpm run lint:ts && pnpm run lint:prettier",
-    "format:ts": "pnpm nx format:write --projects=app-offline-betting-tracking",
-    "format:prettier": "pnpm nx format:write --projects=app-offline-betting-tracking",
+    "format:ts": "pnpm nx format:write --projects=app-betting",
+    "format:prettier": "pnpm nx format:write --projects=app-betting",
     "format": "pnpm run format:ts && pnpm run format:prettier",
-    "test": "pnpm nx test app-offline-betting-tracking",
-    "test:watch": "pnpm nx test app-offline-betting-tracking --watch",
-    "test:cov": "pnpm nx test app-offline-betting-tracking --coverage --runInBand"
+    "test": "pnpm nx test app-betting",
+    "test:watch": "pnpm nx test app-betting --watch",
+    "test:cov": "pnpm nx test app-betting --coverage --runInBand"
   },
   "private": true,
   "dependencies": {
