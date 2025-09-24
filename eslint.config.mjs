@@ -17,6 +17,10 @@ export default [
           allow: ['^.*/eslint(\\.base)?\\.config\\.[cm]?[jt]s$'],
           depConstraints: [
             {
+              'sourceTag': 'domain:betting',
+              'onlyDependOnLibsWithTags': ['domain:betting', 'domain:shared']
+            },
+            {
               'sourceTag': 'type:app',
               'onlyDependOnLibsWithTags': [
                 'type:api',
